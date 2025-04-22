@@ -1,68 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Papa Pardi Channel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      text-align: center;
-    }
-    header {
-      background-color: #333;
-      color: white;
-      padding: 1em 0;
-      font-size: 1.5em;
-    }
-    main {
-      padding: 20px;
-    }
-    iframe {
-      margin: 10px 0;
-      width: 100%;
-      height: 320px;
-      max-width: 480px;
-    }
-    .intro {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-    .adsbygoogle {
-      display: block;
-      text-align: center;
-      margin: 20px auto;
-    }
-  </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa Pardi Channel - Official</title>
+    <!-- AdMob -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2328840700127173" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .video-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 15px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .share-btn, .subscribe-btn {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .subscribe-btn {
+            background: #FF0000;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    Papa Pardi Channel
-  </header>
-  <main>
-    <p class="intro">Hai, saya Papa Pardi, creator dari Malang</p>
+    <header>
+        <h1>Papa Pardi Channel</h1>
+        <p>Hai, saya Papa Pardi, creator dari Malang</p>
+        <!-- Tombol Subscribe YouTube -->
+        <a href="https://youtube.com/@ChannelPapaPardi" target="_blank" class="subscribe-btn">
+            🔔 Subscribe YouTube
+        </a>
+    </header>
 
-    <iframe src="https://www.youtube.com/embed/cgD4Fq1CWpE" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/yDgN-y7V6lM" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/O6PL0EYrqbw" allowfullscreen></iframe>
+    <div class="container">
+        <!-- Video 1 -->
+        <div class="video-item">
+            <h3>Detika Head of Command (drama) multi...</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/cgD4Fq1CWpE" allowfullscreen></iframe>
+            </div>
+            <button class="share-btn">Share</button>
+        </div>
 
-    <!-- Ad Unit -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-app-pub-2328840700127173"
-         data-ad-slot="7561447747"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        <!-- Video 2 -->
+        <div class="video-item">
+            <h3>Bocah lucu spiral (Kirulbaby sportubes)...</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/yDgN-y7V6lM" allowfullscreen></iframe>
+            </div>
+            <button class="share-btn">Share</button>
+        </div>
+
+        <!-- Iklan AdMob -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2328840700127173"
+             data-ad-slot="7561447747"
+             data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <!-- Video 3 -->
+        <div class="video-item">
+            <h3>Barongan Macau Aviat (syouubeshorts)</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/O6PL0EYrqbw" allowfullscreen></iframe>
+            </div>
+            <button class="share-btn">Share</button>
+        </div>
+
+        <!-- Komentar Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://papa-pardi-channel.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    </div>
+
     <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
+        // Fungsi tombol share
+        document.querySelectorAll('.share-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const videoTitle = this.parentElement.querySelector('h3').innerText;
+                const shareUrl = window.location.href;
+                navigator.share? navigator.share({
+                    title: videoTitle,
+                    url: shareUrl
+                }) : alert(`Copied: ${videoTitle}\n${shareUrl}`);
+            });
+        });
     </script>
-  </main>
 </body>
 </html>
